@@ -7,4 +7,6 @@ class Restaurant < ApplicationRecord
   def categories
     %w(chinese italian japanese french belgian)
   end
+
+  CATEGORIES = ['chinese', 'italian', 'japanese', 'french', 'belgian']
 end

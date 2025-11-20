@@ -1,0 +1,7 @@
+<h1 class=>The real Yelp</h1>
+
+<div class="list-group">
+<% @restaurants.each do |r| %>
+<div class="list-group-item"><%= link_to r.name, restaurant_path(r) %></div>
+<% end %>
+</div>

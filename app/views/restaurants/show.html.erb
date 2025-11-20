@@ -1,0 +1,18 @@
+<h1>Check out this restaurant page, wow!</h1>
+
+<h3>Restaurant information</h3>
+<p><%= "Name: " %><%= @restaurant.name %></p>
+<p><%= "Address: " %><%= @restaurant.address %></p>
+<p><%= "Phone number: " %><%= @restaurant.phone_number %></p>
+<p><%= "Category: " %><%= @restaurant.category %></p>
+
+
+<p>
+<h3>Reviews</h3>
+<% @reviews.each do |r| %>
+<p><%= "Review: "%><%= r.content %></p>
+<p><%= "Rating (out of 5): "%><%= r.rating %></p>
+<% end %>
+</p>
+<%= link_to "Write a review here", new_restaurant_review_path(@restaurant)%>
+<%= link_to "Back to Yelp", restaurants_path(@restaurants) %>
